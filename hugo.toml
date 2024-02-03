@@ -5,4 +5,10 @@ theme = 'poison'
 
 [params]
 brand = "Read This"
+description = "My personal collection of helpful tidbits, basic tutorials, and personal posts."
 dark_mode = true
+front_page_content = ["guides", "posts"]
+menu = [{ Name = "Guides", URL = "/guides/", HasChildren = true, Limit = 5 }]
+
+[markup.highlight]
+style = 'catppuccin-macchiato'
