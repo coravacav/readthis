@@ -5,8 +5,6 @@ date = 2024-01-14T07:07:07+01:00
 aliases = [ "/```", "/codeblocks" ]
 +++
 
-# Please Use Code Blocks for Clarity
-
 In chat rooms and forums, it's crucial to present your code clearly. Instead of just pasting code, use code blocks. This not only maintains the format but also makes it easier for others to understand and help you.
 
 ## Why Use Code Blocks?

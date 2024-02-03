@@ -8,7 +8,11 @@ brand = "Read This"
 description = "My personal collection of helpful tidbits, basic tutorials, and personal posts."
 dark_mode = true
 front_page_content = ["guides", "posts"]
-menu = [{ Name = "Guides", URL = "/guides/", HasChildren = true, Limit = 5 }]
+menu = [
+    { Name = "Guides", URL = "/guides/", HasChildren = true, Limit = 5 },
+    { Name = "Posts", URL = "/posts/", HasChildren = true, Limit = 15 },
+    { Name = "Pinned", URL = "/pinned/", HasChildren = false },
+]
 
 [markup.highlight]
 style = 'catppuccin-macchiato'
