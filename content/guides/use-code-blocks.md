@@ -1,5 +1,6 @@
 +++
 title = 'Use code blocks'
+description = 'Make your code readable online'
 date = 2024-01-14T07:07:07+01:00
 aliases = [ "/```" ]
 +++
