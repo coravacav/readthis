@@ -1,7 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Read This'
-theme = 'poison'
+theme = ['hugo-notice', 'poison']
 
 [params]
 brand = "Read This"
