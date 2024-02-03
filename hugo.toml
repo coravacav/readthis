@@ -1,0 +1,8 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Read This'
+theme = 'poison'
+
+[params]
+brand = "Read This"
+dark_mode = true
