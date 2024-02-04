@@ -1,6 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Read This'
+enableGitInfo = true
 
 [params]
 brand = "Read This"
