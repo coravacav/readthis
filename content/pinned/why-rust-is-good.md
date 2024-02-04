@@ -1,10 +1,10 @@
 +++
 title = 'Why Rust Is Good'
 description = 'A list of reasons why Rust is a good programming language'
-date = 2024-02-03T14:20:52-07:00
+date = 2024-02-04
 +++
 
-Features that make rust good. The fact and the simple reason it's good because of that fact.
+TLDR: Benefit of hindsight, flexibility, and sensibility.
 
 {{< notice note >}}
 This list is not exhaustive, but it's a good start.
@@ -15,6 +15,25 @@ This list is not exhaustive, but it's a good start.
 ## Does not have null.
 
 You cannot get a null pointer error unless you do something like `unwrap`, but most of the time, there's better tools to handle the situation _built in_.
+
+{{< details "How does it do it then?" >}}
+
+What does `null` represent anyway? It's a value that represents "no value". Rust has a type that can help represent "no value" called `Option`.
+
+It has a basic type signature
+
+```rust
+enum Option<T> {
+    Some(T),
+    None,
+}
+```
+
+Which makes you always check if a value is `Some`thing or `None`. You cannot have problems like a null pointer exception because you _have to_ check if it's `Some`thing or `None` before you can use it.
+
+[read more about `Option` here](https://doc.rust-lang.org/std/option/index.html)
+
+{{< /details >}}
 
 ## No undefined behavior without `unsafe`.
 
@@ -54,7 +73,9 @@ Lets you do things like attach methods to data.
 
 Macros range from simplifying your own code, to powering incredible abstractions like [`clap`](https://docs.rs/clap/latest/clap/)
 
-## Excellent cross platform / cross compilation. This one is fairly obvious.
+## Excellent cross platform / cross compilation.
+
+This one is fairly obvious.
 
 ## Traits over classes and interfaces.
 

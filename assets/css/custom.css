@@ -1,0 +1,19 @@
+/* This is linked inside the poison theme */
+
+details {
+    cursor: pointer;
+}
+
+details[open] {
+    margin-bottom: 1rem;
+}
+
+details[open] summary {
+    margin-bottom: 1rem;
+}
+
+details[open] .details-content {
+    border-left: 1px solid #ccc;
+    margin-left: -1rem;
+    padding-left: 1rem;
+}
