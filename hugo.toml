@@ -11,6 +11,7 @@ menu = [
     { Name = "Guides", URL = "/guides/", HasChildren = true, Limit = 5 },
     { Name = "Posts", URL = "/posts/", HasChildren = true, Limit = 15 },
     { Name = "Pinned", URL = "/pinned/", HasChildren = false },
+    { Name = "About", URL = "/about/", HasChildren = false },
 ]
 
 [markup.highlight]

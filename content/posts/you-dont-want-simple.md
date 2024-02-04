@@ -1,12 +1,12 @@
 +++
-title = 'You Dont Want Simple You Want Good'
+title = 'You Dont Want Simple'
 date = 2024-02-03T13:45:25-07:00
 draft = true
 +++
 
 ## Simplicity seems to be what many want.
 
-The push for simplicity is why we've seen a spike in popularity of [htmx](https://htmx.org/) for the web, the continued [push against microservices](https://dev.to/anthony_hagi/you-dont-need-microservices-a-real-world-perspective-1kck), or the [continued recommendations to use C]().
+The push for simplicity is why we've seen a spike in popularity of [htmx](https://htmx.org/) for the web, the [continued push against microservices](https://dev.to/anthony_hagi/you-dont-need-microservices-a-real-world-perspective-1kck), or the [continued recommendations to use C]().
 
 I'm not here to defend or advocate for any of these technologies or practices, but I do want to point out that simplicity is not the end goal.
 
