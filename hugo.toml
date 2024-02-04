@@ -20,4 +20,4 @@ style = 'catppuccin-macchiato'
 [[module.imports]]
 path = "github.com/martignoni/hugo-notice"
 [[module.imports]]
-path = "github.com/lukeorth/poison"
+path = "github.com/coravacav/hugo-theme"

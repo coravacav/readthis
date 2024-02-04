@@ -35,6 +35,16 @@ Which makes you always check if a value is `Some`thing or `None`. You cannot hav
 
 {{< /details >}}
 
+{{< details "Doesn't unwrap panic if it fails" >}}
+
+`unwrap` will panic if it's `None`, but there are other tools to handle this situation, like `expect` or `match` or `if let` or `map` or `and_then` or `or_else` or `unwrap_or` or `unwrap_or_else` or `ok_or` or `ok_or_else` or ... you get the idea.
+
+`unwrap` is nice for toy examples or when you're fairly certain it's not `None`, but it's not the best tool for the job in most cases.
+
+It's still better than something like null though, because you can then _pinpoint where the problem is_ and handle it.
+
+{{< /details >}}
+
 ## No undefined behavior without `unsafe`.
 
 You are _guaranteed to have zero undefined behavior_ if there is zero `unsafe` anywhere in your program (in code _you write_)
