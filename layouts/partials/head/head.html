@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
+<html xmlns="http://www.w3.org/1999/xhtml" {{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}" {{end}}
+    class="scroll-smooth h-full{{if .Site.Params.dark_mode}} dark{{end}}">
+
 <head>
     {{ partial "head/scripts.html" . }}
 
@@ -18,6 +20,5 @@
     <!-- CSS stylesheets -->
     {{ partial "head/stylesheets.html" . }}
 
-    <!-- Custom style tag for parameterized CSS -->
-    {{ partial "head/css.html" . }}
+
 </head>

@@ -1,13 +1,18 @@
-<aside class="sidebar">
-  <div class="container sidebar-sticky">
-    {{ partial "light_dark.html" . }}
+<aside id="sidebar"
+  class="w-full lg:w-80 transition-all duration-500 relative lg:fixed lg:top-0 lg:left-0 lg:bottom-0 pt-8 px-16 bg-purple-100 dark:bg-neutral-900/40 text-center">
+  <div class="flex flex-col h-full pb-4">
     {{ partial "sidebar/title.html" . }}
     {{ partial "sidebar/menu.html" . }}
     {{ partial "sidebar/socials.html" . }}
+    <div class="flex grow"></div>
     {{ partial "sidebar/copyright.html" . }}
   </div>
-  <button class="sidebar-toggle" aria-label="Close sidebar">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+  {{ partial "light_dark.html" . }}
+  <button id="sidebar-toggle"
+    class="hidden lg:block absolute bottom-16 right-4 w-8 h-8 pointer transition-all duration-500 hover:bg-neutral-500/20 rounded-full"
+    aria-label="Hide sidebar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="fill-neutral-950 dark:fill-white"
+      viewBox="0 0 256 256">
       <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
       </path>
     </svg>

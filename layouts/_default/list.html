@@ -1,18 +1,27 @@
 {{ define "main" -}}
-<h1 class="title">{{ .Title }}</h1>
-<ul class="entries">
+<div class="max-w-[65ch] w-full mx-auto lg:mx-0">
+    <h1 class="text-4xl">{{ .Title }}</h1>
+    {{ if .Content }}
+    <p class="pt-4">
+        {{ .Content }}
+    </p>
+    {{ end }}
     {{ range .Pages.GroupByDate "2006" }}
-        <h3 style="text-align: center;">{{ .Key }}</h3>
+    <h3 class="text-center text-2xl pt-4 w-full">{{ .Key }}</h3>
+    <hr class="border-neutral-950 mt-2 pb-3">
+    <ul class="flex flex-wrap gap-2">
         {{ range .Pages }}
-            <li>
-                <span class="title">
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </span>
-                <span class="published">
+        <li>
+            <a href="{{ .RelPermalink }}"
+                class="rounded flex flex-col p-4 bg-purple-100 group hover:bg-purple-300 dark:hover:bg-neutral-950 transition-colors dark:hover:text-purple-300">
+                {{ .Title }}
+                <span class="text-purple-500 dark:text-neutral-500 text-xs">
                     <time class="pull-right post-list">{{ .Date | time.Format ":date_long" }}</time>
                 </span>
-            </li>
+            </a>
+        </li>
         {{ end }}
+    </ul>
     {{ end }}
-</ul>
+</div>
 {{ end }}

@@ -1,0 +1,15 @@
+{
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.10",
+        "autoprefixer": "^10.4.17",
+        "concurrently": "^8.2.2",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^16.0.1",
+        "tailwindcss": "^3.4.1"
+    },
+    "scripts": {
+        "build": "npm run tailwind && hugo",
+        "dev": "concurrently -k \"npm run tailwind -- -w\" \"hugo mod get && hugo server -D --navigateToChanged\" ",
+        "tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/ephemeral/tailwind_output.css"
+    }
+}

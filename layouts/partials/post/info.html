@@ -1,46 +1,46 @@
-<div class="info">
-  <h1 class="post-title">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+<div>
+  <h1 class='{{ if .context.IsHome }}text-4xl{{ else }}text-6xl{{ end }}'>
+    <a href="{{ .page.Permalink }}">{{ .page.Title }}</a>
   </h1>
 
-  <div class="headline">
+  <div class="headline pb-4 pt-2">
     <div>
-      {{ if .Date }}
-      <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z0700" }}" class="post-date">
-        {{ .Date.Format "January 2, 2006" }}
+      {{ if .page.Date }}
+      <time datetime="{{ .page.Date.Format " 2006-01-02T15:04:05Z0700" }}" class="text-neutral-500">
+        {{ .page.Date.Format "January 2, 2006" }}
       </time>
-      <span> - </span>
+      <span class="text-neutral-500"> - </span>
       {{ end }}
-      <span class="reading-time">
-        {{ if gt .ReadingTime 1 }}
-        {{ .Scratch.Set "readingTime" "mins" }}
+      <span class="text-neutral-500">
+        {{ if gt .page.ReadingTime 1 }}
+        {{ .page.Scratch.Set "readingTime" "mins" }}
         {{ else }}
-        {{ .Scratch.Set "readingTime" "min" }}
+        {{ .page.Scratch.Set "readingTime" "min" }}
         {{ end }}
 
-        <span>{{ .ReadingTime }} {{ .Scratch.Get "readingTime" }} read</span>
+        <span>{{ .page.ReadingTime }} {{ .page.Scratch.Get "readingTime" }} read</span>
       </span>
     </div>
 
-    {{ if .Params.tags }}
-    <ul class="tags">
-      {{ range .Params.tags }}
-      <li class="tag-{{ . }}">
-        <a href="{{ " tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ if .page.Params.tags }}
+    <ul>
+      {{ range .page.Params.tags }}
+      <li>
+        <a href="{{ " tags/" | absLangURL }}{{ .page | urlize }}">{{ .page }}</a>
       </li>
       {{ end }}
     </ul>
     {{ end }}
   </div>
 
-  {{ $Site := .Site }}
-  {{ if .Params.series }}
+  {{ $Site := .page.Site }}
+  {{ if .page.Params.series }}
   <p class="seriesname">
-    Series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
+    Series: <a href="{{ $Site.BaseURL }}series/{{ .page.Params.series | urlize }}">{{ .page.Params.series }}</a>
   </p>
   {{ end }}
 
-  {{ if .Params.featuredImage }}
+  {{ if .page.Params.featuredImage }}
   <p>
     <img src="{{.Params.featuredImage}}"><br>
   </p>

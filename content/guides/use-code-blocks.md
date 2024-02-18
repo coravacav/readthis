@@ -1,7 +1,7 @@
 +++
 title = 'Use code blocks'
 description = 'Make your code readable online'
-date = 2024-01-14T07:07:07+01:00
+date = 2024-02-16
 aliases = [ "/```", "/codeblocks" ]
 +++
 
@@ -15,7 +15,7 @@ Code blocks preserve formatting, show your code as-is, and improve readability. 
 
 ### Single-line Code
 
-Use backticks (`` ` ``) to create a single-line code block.
+Use backticks ` to create a single-line code block.
 
 For example,
 \`println!("i'll be highlighted!")\` turns into a single line of code.

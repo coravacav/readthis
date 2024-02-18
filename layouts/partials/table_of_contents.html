@@ -1,6 +1,8 @@
-<div class="article-toc {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
-    <div class="toc-wrapper">
-      <h4 id="contents"></h4>
-      {{ .TableOfContents }}
-    </div>
-</div>
+<aside
+  class="hidden text-sm 2xl:block fixed pt-8 overflow-y-auto border-l-2 pl-4 pr-16 border-l-neutral-950 ml-auto text-black dark:text-white w-80 right-0 top-0 bottom-0">
+  <div>
+    <h4 class="text-lg">Table of Contents</h4>
+    <hr class="pb-1 border-neutral-950">
+    {{ .TableOfContents }}
+  </div>
+</aside>

@@ -1,21 +1,18 @@
-<div class="sidebar-about">
-    <h1 class="brand">
-        {{ if .Site.Params.remote_brand_image }}
-            <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Params.remote_brand_image }}" alt="brand image">
-            </a>
-        {{ else if .Site.Params.brand_image }}
-            <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Params.brand_image }}" alt="brand image">
-            </a>
-        {{ end }}
-        {{ if .Site.Params.brand }}
-            <a href="{{ .Site.BaseURL }}">
-                <h1>{{ .Site.Params.brand }}</h1>
-            </a>
-        {{ end }}
-    </h1>
-    <p class="lead">
-    {{ with .Site.Params.description }}{{. | safeHTML}}{{end}}
-    </p>
+<div>
+    <a class="h-10 block" href="{{ .Site.BaseURL }}">
+        <h1 id="sidebar-title" class="text-4xl transition-all duration-500 origin-top text-nowrap">
+            <span class="hover:text-purple-600 dark:hover:text-purple-300 transition-colors">
+                {{ .Site.Params.brand }}
+            </span>
+        </h1>
+        <span id="sideways-sidebar-title"
+            class="transition-all duration-500 fixed opacity-0 left-[-3rem] top-20 rotate-[-90deg] text-4xl text-nowrap">
+            <span class="hover:text-purple-600 dark:hover:text-purple-300">
+                {{ .Site.Params.brand }}
+            </span>
+        </span>
+    </a>
+    <h2 class="pt-2">
+        {{ with .Site.Params.description }}{{. | safeHTML}}{{end}}
+    </h2>
 </div>

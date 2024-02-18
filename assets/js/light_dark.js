@@ -1,39 +1,56 @@
-const btn = document.querySelector(".btn-light-dark");
-const moon = document.querySelector(".moon");
-const sun = document.querySelector(".sun");
+const html = document.querySelector('html');
+let btn, moon, sun;
 
-const themeFromLS = localStorage.getItem("theme")
-const themeFromHugo = document.body.classList.contains("dark-theme") ? "dark" : null
+const themeFromLS = localStorage.getItem('theme');
+const themeFromHugo = html.classList.contains('dark') ? 'dark' : null;
 const currentTheme = themeFromLS ? themeFromLS : themeFromHugo;
 
-if (currentTheme == "dark") {
-    document.body.classList.add("dark-theme");
-    moon.style.display = 'none';
-    sun.style.display = 'block';
-} else {
-    document.body.classList.remove("dark-theme");
-    moon.style.display = 'block';
-    sun.style.display = 'none';
+function enableElement(element) {
+    element.classList.add('opacity-100');
+    element.classList.remove('opacity-0');
 }
 
-btn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-    let hasComments = document.getElementById("remark42");
-    let theme = "light";
+function disableElement(element) {
+    element.classList.add('opacity-0');
+    element.classList.remove('opacity-100');
+}
 
-    if (document.body.classList.contains("dark-theme")) {
-        theme = "dark";
-        moon.style.display = 'none';
-        sun.style.display = 'block';
-        if (hasComments) {
-            window.REMARK42.changeTheme("dark");
-        }
+function enableDarkMode() {
+    html.classList.add('dark');
+    enableElement(sun);
+    disableElement(moon);
+}
+
+function enableLightMode() {
+    html.classList.remove('dark');
+    enableElement(moon);
+    disableElement(sun);
+}
+
+if (currentTheme == 'dark') {
+    html.classList.add('dark');
+} else {
+    html.classList.remove('dark');
+}
+
+setTimeout(() => {
+    btn = document.getElementById('btn-light-dark');
+    moon = document.getElementById('moon');
+    sun = document.getElementById('sun');
+
+    if (currentTheme == 'dark') {
+        enableDarkMode();
     } else {
-        moon.style.display = 'block';
-        sun.style.display = 'none';
-        if (hasComments) {
-            window.REMARK42.changeTheme("light");
-        }
+        enableLightMode();
     }
-    localStorage.setItem("theme", theme);
-});
+
+    btn.addEventListener('click', function () {
+        if (html.classList.contains('dark')) {
+            localStorage.setItem('theme', 'light');
+            enableLightMode();
+        } else {
+            localStorage.setItem('theme', 'dark');
+            enableDarkMode();
+        }
+    });
+}, 100);

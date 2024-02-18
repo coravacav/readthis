@@ -1,9 +1,7 @@
 {{ $pag := .Paginate (where .Pages "Type" "posts") }}
 {{ if gt $pag.TotalPages 1 }}
 <hr>
-<div class="footer">
-<nav id="page-nav">
-
+<nav id="page-nav" class="flex justify-between w-full">
     {{ if $pag.HasPrev }}
     <a href="{{ $pag.Prev.URL }}" rel="prev" class="extend prev">&laquo; Previous{{ T "Prev" }}</a>
     {{ end }}
@@ -18,5 +16,5 @@
     {{ if $pag.HasNext }}
     <a href="{{ $pag.Next.URL }}" rel="next" class="extend next">{{ T "Next" }} Next &raquo;</a>
     {{ end }}
-</div>
+</nav>
 {{ end }}

@@ -1,26 +1,20 @@
 {{/* Personal/custom script for light/dark mode and tabs */}}
 {{ $js := slice
-      (resources.Get "js/light_dark.js")
-      (resources.Get "js/tabs.js") }}
-
-{{/* Locally hosted code for KaTeX */}}
-{{ $js = $js | append
-      (resources.Get "js/lib/katex.js")
-      (resources.Get "js/lib/auto-render.js") }}
-
-{{/* Personal/custom scripts for KaTeX */}}
-{{ $js = $js | append (resources.Get "js/katex.js") }}
-
-{{/* Personal/custom scripts for table of contents */}}
-{{ if not .Site.Params.hideToc }}
-    {{ $js = $js | append (resources.Get "js/toc.js") }}
-{{ end }}
-
-{{/* Personal/custom scripts for codeblocks */}}
-{{ $js = $js | append (resources.Get "js/codeblock.js") }}
+(resources.Get "js/tabs.js")
+(resources.Get "js/lib/katex.js")
+(resources.Get "js/lib/auto-render.js")
+(resources.Get "js/katex.js")
+(resources.Get "js/toc.js")
+(resources.Get "js/codeblock.js")
+(resources.Get "js/sidebar-toggle.js")
+(resources.Get "js/header-copy-link.js")
+}}
 
 {{ $js_bundle := $js | resources.Concat "js/bundle.js" | minify | fingerprint }}
+{{ $non_deferred_js_dundle := slice (resources.Get "js/light_dark.js") | resources.Concat "js/non_deferred_bundle.js" |
+minify | fingerprint }}
 
+<script language="javascript" type="text/javascript" src="{{ $non_deferred_js_dundle.RelPermalink }}"></script>
 <script defer language="javascript" type="text/javascript" src="{{ $js_bundle.RelPermalink }}"></script>
 
 
@@ -29,5 +23,5 @@
 {{ end }}
 
 {{ if hugo.IsProduction -}}
-  {{ template "_internal/google_analytics.html" . -}}
+{{ template "_internal/google_analytics.html" . -}}
 {{ end -}}

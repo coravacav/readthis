@@ -1,19 +1,19 @@
 {{ define "main" -}}
-<div class="posts">
+<div class="flex flex-col gap-4 max-w-[65ch] w-full">
     {{ $frontPageTypes := default (slice "posts") .Site.Params.front_page_content }}
-    {{ range (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}
-    <article class="post">
-        {{ partial "post/info.html" . }}
-        {{ if or (.Site.Params.noSummary) (.Params.noSummary) }}
-        {{ .Content }}
-        {{ else }}
-        {{ .Summary }}
-        {{ if .Truncated }}
-        <div class="read-more-link">
-            <a href="{{ .RelPermalink }}">Read More…</a>
-        </div>
-        {{ end }}
-        {{ end }}
+    {{ range $page := (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}
+    <article>
+        {{ partial "post/info.html" (dict "page" . "context" $) }}
+        <span class="text-lg">
+            {{ if or (.Site.Params.noSummary) (.Params.noSummary) }}
+            {{ .Content }}
+            {{ else }}
+            {{ .Summary }}
+            {{ if .Truncated }}
+            <a class="block pt-2" href="{{ .RelPermalink }}">Read More…</a>
+            {{ end }}
+            {{ end }}
+        </span>
     </article>
     {{- end }}
 </div>

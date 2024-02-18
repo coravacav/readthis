@@ -1,6 +1,0 @@
-I couldn't find a way to get this to work, storing alongside for now
-
-        {{- $images := partial "_funcs/get-page-images" . -}} {{- range first 6
-        $images -}}
-        <meta property="og:image" content="{{ .Permalink }}" />
-        {{- end -}}
