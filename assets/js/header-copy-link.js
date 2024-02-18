@@ -11,13 +11,13 @@ document
                 );
 
                 copyLink.classList.add(
-                    'text-green-500',
-                    'hover:text-green-500'
+                    '!text-green-500',
+                    '!hover:text-green-500'
                 );
                 setTimeout(() => {
                     copyLink.classList.remove(
-                        'text-green-500',
-                        'hover:text-green-500'
+                        '!text-green-500',
+                        '!hover:text-green-500'
                     );
                 }, 500);
             });
