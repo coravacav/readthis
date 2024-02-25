@@ -37,7 +37,11 @@ If you're fresh out of college (or in it), you might want to put your education 
 
 ### Talk about yourself and your abilities
 
-Resumes are about selling yourself. This means that you should talk about your abilities. There are two main ways to do this:
+Resumes are about selling yourself. This means that you should talk about your abilities.
+
+As a general guideline (but not a hard rule!), start each bullet point with past or present actions (Engineered…, Led…, Programming…, Writing/Wrote…, etc.)
+
+There are two main ways to do this:
 
 #### Talk about your experience
 
@@ -133,7 +137,7 @@ Realistically, you should probably use a template or a derivative.
 -   Use bolding and italics to make things stand out, but use them sparingly and consistently. You shouldn't have a single word bolded in one section and a whole sentence bolded in another. Don't bold _once_.
 -   Skill bars are meaningless, don't use them.
 -   Don't use a photo. It's not relevant and it's not useful.
--   Avoid using lots of color. Some accents are fine, but don't make your resume a rainbow.
+-   Avoid using lots of color. Some accents are **good and encouraged**, but don't make your resume a rainbow.
 -   Use a font that's easy to read. This is not the time to use a fun font.
 -   Use a consistent format. If you're going to use bullet points, use them everywhere. If you're going to use a period at the end of your bullet points, use them everywhere.
 -   Use correct tenses for your verbs. If you're currently working at a job, use present tense. If you're not, use past tense.
