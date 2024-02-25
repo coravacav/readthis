@@ -1,6 +1,6 @@
 +++
-title = 'Why Rust Is Good'
-description = 'A list of reasons why Rust is a good programming language'
+title = 'Why rust is good'
+description = 'A list of reasons why rust is a good programming language'
 date = 2024-02-04
 +++
 
