@@ -1,5 +1,5 @@
 +++
-title = 'You Dont Want Simple'
+title = "You don't want simple"
 date = 2024-02-03T13:45:25-07:00
 draft = true
 +++
@@ -25,3 +25,6 @@ I'm not here to defend or advocate for any of these technologies or practices, b
 -   [If simple is good, why do we add complexity?](https://thomaswilson.xyz/blog/2022-06-18-why-add-complexity)
 -   [The XY Problem](https://xyproblem.info/)
 -   [Most ThePrimeagen videos](https://www.youtube.com/@ThePrimeTimeagen)
+-
+
+https://youtu.be/zJNkIJCQohU?si=h_SvZaGts83LqH9G near the end

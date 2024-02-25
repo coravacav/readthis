@@ -11,7 +11,9 @@ front_page_content = ["guides", "posts"]
 menu = [
     { Name = "Guides", URL = "/guides/", HasChildren = true, Limit = 5 },
     { Name = "Posts", URL = "/posts/", HasChildren = true, Limit = 15 },
-    { Name = "Pinned", URL = "/pinned/", HasChildren = false },
+    { Name = "Pinned", URL = "/pinned/", HasChildren = true, Limit = 15 },
+    { Name = "Benchmarks", URL = "/benchmarks/", HasChildren = false },
+    { Name = "Unfiltered Rants", URL = "/unfiltered-rants/", HasChildren = false },
     { Name = "About", URL = "/about/", HasChildren = false },
 ]
 
