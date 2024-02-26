@@ -143,3 +143,4 @@ Realistically, you should probably use a template or a derivative.
 -   Use correct tenses for your verbs. If you're currently working at a job, use present tense. If you're not, use past tense.
 -   Use a consistent date format. If you're going to use month and year, use it everywhere. If you're going to use just the year, use it everywhere.
 -   Contact information should be at the top / by your name, and not bigger than your resume text.
+-   English is read from left to right, so list the important information on the left and things like dates on the right
